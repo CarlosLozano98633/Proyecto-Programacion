@@ -10,9 +10,12 @@ for palabra in palabras:
         conteo[palabra] = 1
 c_espacios = len(texto)
 num_espacios = 0
+oraciones = 0
 for espacio in texto:
     if espacio == "\n" or espacio == " " or espacio == "\t":
         num_espacios += 1
+    if espacio == "." or espacio == "?" or espacio == "!":
+        oraciones += 1
 sin_espacios = c_espacios - num_espacios
 
     
